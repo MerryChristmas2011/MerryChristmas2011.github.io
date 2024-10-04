@@ -1,92 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        #container{
-            border: solid #2c3d50;
-            color: solid #2c3d50;
-            height: 30px;
-            width: 1900px;
-          background-color: #2c3d50;
-          
-        }
-        #item{
-        color: white;
-        font-size: 15px;
-       }
-       #item2 a{
-        float: right;
-        color: white;
-        font-size: 12.5px;
-       }
         header {
-           
-            background-color: #1abc9c;
-            
+            background-image: url(https://startbootstrap.github.io/startbootstrap-stylish-portfolio/assets/img/bg-masthead.jpg);
             text-align: center;
-            color: white;
-            padding: 80px 0;
-        }
-        
-        
-        header img {
-            width: 200px;
+            padding: 180px 0;
         }
 
         header h1 {
-            font-family: serif;
-            font-size: 44px;
+            font-size: 88px;
+            font-family: sans-serif;
         }
 
-        header hr {
-            height: 1.5px;
+        header p {
+            font-size: 31px;
+            font-style: italic;
+            font-weight: 700px;
+        }
+
+        header button {
+            background-color: rgb(10, 135, 180);
+            color: white;
+            font-size: 20px;
+            padding: 15px;
+            border: transparent;
+        }
+
+        header button:hover {
+            background-color: rgb(8, 102, 137);
+        }
+
+        /* about   */
+
+        #about {
+            text-align: center;
+            padding: 100px;
+        }
+
+        #about h1 {
+            font-size: 33px;
+            font-family: sans-serif;
+        }
+
+        #about p {
+            font-size: 22px;
+            font-family: sans-serif;
+            font-weight: 10px;
+        }
+
+        #about button {
+            background-color: black;
+            color: white;
+            font-size: 20px;
+            padding: 15px;
+            border: transparent;
+        }
+
+        #about button:hover {
+            background-color: rgb(85, 85, 85);
+        }
+
+        /* services   */
+
+        #services {
+            padding: 100px;
+            background-color: #317fc0;
+        }
+
+        #services h1 {
+            text-align: center;
+            color: orange;
+            font-family: sans-serif;
+            font-size: 15px;
+        }
+
+        #services h2 {
+            text-align: center;
+            color: white;
+            font-family: sans-serif;
+            font-size: 40px;
+        }
+
+        #services div {
             background-color: white;
+            border: solid white;
             width: 100px;
-            border: solid 1px;
-            border-radius: 5px;
-            display: inline-block;
+            height: 100px;
+            border-radius: 100%;
         }
 
-        header h3 {
-            font-style: 21px;
-
+        #services i {
+            color: #317fc0;
+            font-size: 36px;
+            padding: 32px;
         }
 
-        header i {
-            font-size: 25px;
+        #services h3 {
+            color: white;
+            font-family: sans-serif;
+            font-size: 20px;
+        }
 
-
+        #services p {
+            color: white;
+            font-family: sans-serif;
+            font-size: 13px;
         }
 
     </style>
 </head>
-
 <body>
-    <div id="container">
-        <div id="item">START BOOTSTRAP</div>
-        <div id="item2">
-            <a href="freelancer-portfolio.html">PORTFOLIO</a>
-            <a href="freelancer-about.html">ABOUT</a>
-            <a href="freelancer-contact.html">CONTACT</a>
-            </div>
-    </div>
-  
     <header>
-       <a href="freelancer-location.html"><img src=" https://startbootstrap.github.io/startbootstrap-freelancer/assets/img/avataaars.svg" alt="">></a>
-        <h1>START BOOTSTRAP</h1>
-        <hr>
-        <i class="fa fa-star"></i>
-        <hr>
-        <h3>Graphic Artist - Web Designer - Illustrator</h3>
-        
-     </header>
-  
+        <h1>Stylish Portofolio</h1>
+        <p>A Free Bootstrap Theme by Start Bootstrap</p>
+        <a href="https://startbootstrap.github.io/startbootstrap-stylish-portfolio/#about">
+            <button>Find Out More</button>        
+        </a>
+    </header>
+    <div id="about">
+        <h1>Stylish Portfolio is the perfect theme for your next project!</h1>
+        <p>
+            This theme features a flexible, UX friendly sidebar menu and stock photos from our friends at  
+            <a href="https://unsplash.com/de">
+                Unsplash
+            </a> !
+        </p>
+        <a href="https://startbootstrap.github.io/startbootstrap-stylish-portfolio/#services">
+            <button>
+                What We Offer
+            </button>
+        </a>
+    </div>
+    <div id="services">
+        <h1>SERVICES</h1>
+        <h2>What We Offer</h2>
+        <div>
+            <i class="fa-solid fa-mobile"></i>
+        </div>
+        <h3>Responsive</h3>
+        <p>Looks great on any screen size!</p>
+        <div>
+            <i class="fa-solid fa-pen"></i>
+        </div>
+        <h3>Redesigned</h3>
+        <p>Freshly redesigned for Bootstrap 5.</p>
+    </div>
 </body>
 </html>
