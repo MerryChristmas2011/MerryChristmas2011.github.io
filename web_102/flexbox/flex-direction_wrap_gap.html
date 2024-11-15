@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            font-size: 3em;
+            border: solid;
+            /* change regular container to flex container which makes every child a flex item */
+            display: flex;
+            /* makes different direction */
+            flex-direction: row;
+            /* flex-direction: column; */
+            /* wrap let it turn to 2 dimention */
+            flex-wrap: wrap;
+            /* flow put 2 things in one */
+            /* flex-flow: row wrap; */
+            gap: 10px 20px;
+        }
+
+        #container>div {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+    </div>
+</body>
+</html>
