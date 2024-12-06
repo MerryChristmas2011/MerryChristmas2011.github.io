@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>flex_grow_shrink</title>
+  <style>
+    body {
+      font-size: 2rem;
+    }
+
+    section {
+      border: solid;
+      font-size: 4rem;
+      display: flex;
+    }
+
+    div {
+      height: 100px;
+    }
+
+    #first {
+      background-color: lime;
+
+      flex-grow: 1;
+      flex-shrink: 1;
+      /*      initial width */
+      flex-basis: 400px;
+
+      /*     shorthand */
+      /*      flex: flex-grow flex-shrink flex-basis*/
+      /*      flex: 1 1 300px;*/
+
+      /*      one value: valid flex-grow value */
+      /*      flex: 2;*/
+      /*      flex: 2 equals to flex: 2 1 0*/
+      /*      one value: valid flex-basis value*/
+      /*      flex: 20%;*/
+      /*      flex: 20% equals to flex: 1 1 20% */
+    }
+
+    #second {
+      background-color: limegreen;
+      flex-grow: 2;
+      flex-shrink: 1;
+      /*      initial width */
+      flex-basis: 400px;
+
+      /*     shorthand */
+      /*      flex: 2 1 300px;*/
+    }
+
+    p {
+      margin: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section id='section'>
+    <div id='first'></div>
+    <div id='second'></div>
+  </section>
+
+  <p>Container width:<span id='con_width'></span></p>
+  <p>Container width above 800px, use flex-grow</p>
+  <p>Container width under 800px, use flex-shrink</p>
+
+  <ul>
+    <li>container:800px, <br>both: 400px</li>
+    <li>container:860px, <br>1st: 400+(60/3*1)=420px, <br>2nd: 400+(60/3*2)=440px</li>
+    <li>container:740px, <br>1st: 400-(60/3*2)=360px,<br>2nd: 400-(60/3*1)=380px</li>
+  </ul>
+
+  <div>
+    <pre>
+    container init size is 800
+    when container width is 900,
+    what the first item size is:
+    400+(100/3*1)=433.33...
+    
+    what the second item size is:
+    400+(100/3*2)=866.66...
+    
+  </pre>
+  </div>
+
+  <script>
+    window.addEventListener('resize', function(e) {
+      con_width.innerText = section.clientWidth;
+      first.innerText = first.clientWidth;
+      second.innerText = second.clientWidth;
+    });
+  </script>
+</body></html>

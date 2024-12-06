@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>order_and_align-self</title>
+  <style>
+    body {
+      font-size: 4rem;
+    }
+
+    section {
+      border: solid;
+      display: flex;
+      align-items: center;
+    }
+
+    section>div {
+      flex-basis: 50px;
+    }
+
+    div:nth-child(odd) {
+      background-color: lime;
+      height: 100px;
+    }
+
+    div:nth-child(even) {
+      background-color: #63ddd1;
+      height: 200px;
+    }
+
+    div:nth-child(2) {
+      /* default order is 0 */
+      order: 1;
+
+      /* not recommend to use order, because cause confusion: 
+1. if you copy text, it is still 1234.
+2. if you press tab, still jump based on orignal order.
+3. screen reader still read in orignal order */
+    }
+
+    div:nth-child(3) {
+      align-self: flex-end;
+      order: 3;
+    }
+
+    div:nth-child(4) {
+      align-self: flex-end;
+      order: 4;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div>a</div>
+    <div>b</div>
+    <div>c</div>
+    <div>d</div>
+  </section>
+
+</body></html>

@@ -1,0 +1,68 @@
+<!Doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>width_vs_flex-basis</title>
+  <style>
+    body {
+      font-size: 1.4rem;
+    }
+
+    section {
+      display: flex;
+      border: solid;
+    }
+
+    .f {
+      background-color: lime;
+      flex-basis: auto;
+      /*      width: 100px;*/
+    }
+
+    .w {
+      background-color: deepskyblue;
+      width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <div class="f">1</div>
+    <div class="f">2</div>
+    <div class="w">3</div>
+    <div class="w">4</div>
+  </section>
+
+  <table border>
+    <tr>
+      <th>width/height</th>
+      <th>flex-basis</th>
+    </tr>
+    <tr>
+      <td>works for all containers</td>
+      <td>works only in flex container</td>
+    </tr>
+    <tr>
+      <td>can be overriden by flex-basis, for example, if direction is row, flex-basis override 'width', if direction is column, flex-basis override 'height'</td>
+      <td>if direction is row, flex-basis is width; if direction is column, flex-basis is height.</td>
+    </tr>
+    <tr>
+      <td>not response to flex behaviors</td>
+      <td><b>response to flex-grow and flex-shrink</b>. This is the main reason to use flex-basis instead of width/height in flex container.</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>When set to 'auto', it look at width/height value. If no width/height set, it depends on content size</td>
+    </tr>
+    <tr>
+      <td>100px</td>
+      <td>100px</td>
+    </tr>
+    <tr>
+      <td>20%</td>
+      <td>20%</td>
+    </tr>
+  </table>
+
+</body></html>
