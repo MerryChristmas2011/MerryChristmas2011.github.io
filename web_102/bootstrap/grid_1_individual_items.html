@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    #container {
+      display: grid;
+      border: solid blue;
+      height: 600px;
+      /*      */
+      grid-template-columns: 100px 200px;
+      grid-auto-rows: 100px;
+      gap: 10px;
+    }
+
+    #container>div {
+      background-color: purple;
+    }
+
+    #container>div:nth-child(5) {
+      height: 50px;
+      width: 50px;
+      align-self: center;
+      justify-self: end;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="container">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+</body></html>
